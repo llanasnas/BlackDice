@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DiceViewController: UIView {
+class DiceViewController: UIImageView {
 
     /*
     // Only override draw() if you perform custom drawing.
@@ -18,6 +18,7 @@ class DiceViewController: UIView {
     }
     */
     
+
     
     
 
