@@ -58,6 +58,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="5Si-CH-OfY" appends="YES" id="WqG-mu-sJs"/>
+                                    <outletCollection property="gestureRecognizers" destination="oPZ-bH-0cl" appends="YES" id="ARY-K3-zFy"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="c8c-Ro-pU7" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
@@ -65,6 +66,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="azY-hr-o0V" appends="YES" id="tg6-Sp-NCt"/>
+                                    <outletCollection property="gestureRecognizers" destination="xNE-K6-iVA" appends="YES" id="nA8-D7-n8U"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="LAX-U7-77j" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
@@ -72,6 +74,7 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ccg-PI-Rxg" appends="YES" id="6yV-dS-gW8"/>
+                                    <outletCollection property="gestureRecognizers" destination="D4y-oc-ihO" appends="YES" id="5Ft-Hj-HfI"/>
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-JS-M3Q" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
@@ -82,6 +85,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="dWY-rt-exR" appends="YES" id="cF3-RC-ZyF"/>
+                                    <outletCollection property="gestureRecognizers" destination="AjR-NN-MRa" appends="YES" id="19L-yA-WIO"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiB-jS-Mc7">
@@ -155,8 +159,8 @@
                         <outlet property="imageDice3" destination="c8c-Ro-pU7" id="c5j-80-RV3"/>
                         <outlet property="imageDice4" destination="LAX-U7-77j" id="UEZ-Yf-p7F"/>
                         <outlet property="limitNumber" destination="ae7-Cs-xn2" id="9Zz-Rb-guD"/>
-                        <outlet property="myScore" destination="W1c-dP-rR6" id="9S9-WR-r9g"/>
-                        <outlet property="otherScore" destination="N1B-xb-ryO" id="b2c-dk-7xx"/>
+                        <outlet property="myScore" destination="Lqe-0o-2Ll" id="XBI-iH-zbN"/>
+                        <outlet property="otherScore" destination="fks-sg-5Ox" id="cDb-IW-SqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,6 +184,26 @@
                         <action selector="prueba:" destination="BYZ-38-t0r" id="Uq8-nq-7RU"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="AjR-NN-MRa">
+                    <connections>
+                        <action selector="stopDice:" destination="BYZ-38-t0r" id="bGP-8b-5wR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="oPZ-bH-0cl">
+                    <connections>
+                        <action selector="stopDice:" destination="BYZ-38-t0r" id="cmp-Y9-2LS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="xNE-K6-iVA">
+                    <connections>
+                        <action selector="stopDice:" destination="BYZ-38-t0r" id="6S7-5A-JA8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="D4y-oc-ihO">
+                    <connections>
+                        <action selector="stopDice:" destination="BYZ-38-t0r" id="amD-Vk-mch"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="-17.119565217391305"/>
         </scene>
