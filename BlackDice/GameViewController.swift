@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class GameViewController: UIViewController {
     
     var photo: Array<UIImage>=[]
-    let randomLimitNum:Int = Int(arc4random_uniform(24) + 7)
+    var randomLimitNum:Int = Int(arc4random_uniform(24) + 7)
     var punts = 0
     var otherPunts = 0
-    
+    var soundID:SystemSoundID=0;
 
     @IBOutlet weak var otherScore: UILabel!
     @IBOutlet weak var myScore: UILabel!
@@ -24,18 +25,16 @@ class GameViewController: UIViewController {
     @IBOutlet weak var imageDice4: UIImageView!
     @IBOutlet weak var limitNumber: UILabel!
     @IBOutlet weak var finishButton: UIButton!
-    
-    
-    
  
     
     @IBAction func prueba(_ sender: UIPanGestureRecognizer) {
+        AudioServicesPlaySystemSound(soundID)
         switch sender.view {
         case imageDice1?:
             if sender.state == .ended{
                 if let dice1 = imageDice1 {
-                    punts = punts + Int(arc4random_uniform(6) + 1)
-                    print("1")
+                    
+                    print(Int(arc4random_uniform(6) + 1))
                     diceAnimation(imagen: dice1)
                 }
             }
@@ -43,20 +42,23 @@ class GameViewController: UIViewController {
             if sender.state == .ended{
                 if let dice2 = imageDice2 {
                     
+                    diceAnimation(imagen: dice2)
                     print("2")
                 }
             }
         case imageDice3?:
             if sender.state == .ended{
                 if let dice3 = imageDice3 {
-                    punts = punts + Int(arc4random_uniform(6) + 1)
+                    
+                    diceAnimation(imagen: dice3)
                     print("3")
                 }
             }
         case imageDice4?:
             if sender.state == .ended{
                 if let dice4 = imageDice4 {
-                    punts = punts + Int(arc4random_uniform(6) + 1)
+                    
+                    diceAnimation(imagen: dice4)
                     print("4")
                 }
             }
@@ -68,26 +70,43 @@ class GameViewController: UIViewController {
         }
     }
     
-    func pan(gesture:UIPanGestureRecognizer){
-        switch gesture.state {
-        case .changed:
-           print("hola")
-        default:
-            break
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         limitNumber.text = String(randomLimitNum)
+        
+        if let soundURL=Bundle.main.url(forResource:"dicesound",withExtension: "mp3"){
+            AudioServicesCreateSystemSoundID(soundURL as CFURL, &soundID)
+        }
+        
         for index in 1...6{
             let name:String="dice\(index)"
             var image:UIImage=UIImage(named:name)!
             photo.append(image)
         }
         
-       
+        
     }
+    
+    func newGame(){
+        
+        self.randomLimitNum = Int(arc4random_uniform(24) + 7)
+        self.punts = 0
+        self.otherPunts = 0
+        self.myScore.text = String(self.punts)
+        self.otherScore.text = String(self.otherPunts)
+        self.limitNumber.text = String(self.randomLimitNum)
+        self.imageDice1.image = UIImage(named: "finger")
+        self.imageDice2.image = UIImage(named: "finger")
+        self.imageDice3.image = UIImage(named: "finger")
+        self.imageDice4.image = UIImage(named: "finger")
+    }
+    
+    
+  
+
     @IBAction func stopDice(_ sender: UITapGestureRecognizer) {
         
         switch sender.view {
@@ -100,21 +119,22 @@ class GameViewController: UIViewController {
         case imageDice2?:
             if sender.state == .ended{
                 if let dice2 = imageDice2 {
-                    
+                    diceAnimatioStop(imagen: dice2)
                     print("2")
                 }
             }
         case imageDice3?:
             if sender.state == .ended{
                 if let dice3 = imageDice3 {
-                    punts = punts + Int(arc4random_uniform(6) + 1)
-                    print("3")
+                    diceAnimatioStop(imagen: dice3)
+                    print("lol 3")
                 }
             }
         case imageDice4?:
             if sender.state == .ended{
                 if let dice4 = imageDice4 {
-                    punts = punts + Int(arc4random_uniform(6) + 1)
+                   
+                    diceAnimatioStop(imagen: dice4)
                     print("4")
                 }
             }
@@ -137,8 +157,10 @@ func diceAnimatioStop(imagen: UIImageView){
     }, completion: {finished in
         let imagePoints = Int(arc4random_uniform(5) + 1)
         let other = Int(arc4random_uniform(5) + 1)
+        print("holas \(imagePoints)")
         self.punts = self.punts + imagePoints+1
-        self.otherPunts = self.otherPunts + other
+        print("Els meus punts \(self.punts)")
+        self.otherPunts = self.otherPunts + other+1
         imagen.image=self.photo[imagePoints]
         let animator = UIViewPropertyAnimator(
             duration: 1,
@@ -149,6 +171,7 @@ func diceAnimatioStop(imagen: UIImageView){
         )
         animator.startAnimation()
         self.myScore.text = String(self.punts)
+        self.otherScore.text = String(self.otherPunts)
     })
     
 }
@@ -176,6 +199,15 @@ func diceAnimatioStop(imagen: UIImageView){
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "listo" {
+            let destinationVC = segue.destination as! WinnerViewController
+            destinationVC.myPoints = self.punts
+            destinationVC.otherPoints = self.otherPunts
+            destinationVC.limitNumber = self.randomLimitNum
+            
+            self.newGame()
+        }
+    }
 }
 

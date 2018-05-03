@@ -1,16 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uya-QA-8PK">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="v10-8C-hPe">
+            <objects>
+                <navigationController id="Uya-QA-8PK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TM8-fk-Kst">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="vLz-wT-L6n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsc-em-pfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-17"/>
+        </scene>
+        <!--Black Dice-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="BlackDice" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,10 +35,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-dP-rR6">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W1c-dP-rR6">
                                 <rect key="frame" x="16" y="350" width="183" height="57"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqe-0o-2Ll">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqe-0o-2Ll">
                                         <rect key="frame" x="61" y="18" width="61" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -36,10 +53,10 @@
                                     <constraint firstItem="Lqe-0o-2Ll" firstAttribute="centerX" secondItem="W1c-dP-rR6" secondAttribute="centerX" id="xsU-xf-2rM"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N1B-xb-ryO">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1B-xb-ryO">
                                 <rect key="frame" x="215" y="350" width="183" height="59"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fks-sg-5Ox">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fks-sg-5Ox">
                                         <rect key="frame" x="57" y="19" width="68" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -54,7 +71,7 @@
                                 </constraints>
                             </view>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="5WC-8h-crw" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
-                                <rect key="frame" x="215" y="36" width="183" height="139"/>
+                                <rect key="frame" x="215" y="80" width="183" height="139"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="5Si-CH-OfY" appends="YES" id="WqG-mu-sJs"/>
@@ -62,7 +79,7 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="c8c-Ro-pU7" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
-                                <rect key="frame" x="16" y="191" width="183" height="139"/>
+                                <rect key="frame" x="16" y="235" width="183" height="139"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="azY-hr-o0V" appends="YES" id="tg6-Sp-NCt"/>
@@ -70,7 +87,7 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" translatesAutoresizingMaskIntoConstraints="NO" id="LAX-U7-77j" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
-                                <rect key="frame" x="215" y="191" width="183" height="139"/>
+                                <rect key="frame" x="215" y="235" width="183" height="139"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="ccg-PI-Rxg" appends="YES" id="6yV-dS-gW8"/>
@@ -78,7 +95,7 @@
                                 </connections>
                             </imageView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finger" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0D4-JS-M3Q" customClass="DiceViewController" customModule="BlackDice" customModuleProvider="target">
-                                <rect key="frame" x="16" y="36" width="183" height="139"/>
+                                <rect key="frame" x="16" y="80" width="183" height="139"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="139" id="jEl-KS-Ujh"/>
@@ -88,15 +105,18 @@
                                     <outletCollection property="gestureRecognizers" destination="AjR-NN-MRa" appends="YES" id="19L-yA-WIO"/>
                                 </connections>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiB-jS-Mc7">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiB-jS-Mc7">
                                 <rect key="frame" x="103" y="435" width="208" height="50"/>
                                 <color key="backgroundColor" red="0.72772644378945783" green="1" blue="0.6914343203062705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="LISTO"/>
+                                <connections>
+                                    <segue destination="19m-lJ-LOq" kind="show" identifier="listo" id="pAd-5D-7C0"/>
+                                </connections>
                             </button>
-                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="mKQ-zP-h9Z" customClass="LimitNumberCircleView" customModule="BlackDice" customModuleProvider="target">
+                            <view contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mKQ-zP-h9Z" customClass="LimitNumberCircleView" customModule="BlackDice" customModuleProvider="target">
                                 <rect key="frame" x="103" y="523" width="208" height="155"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-Cs-xn2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ae7-Cs-xn2">
                                         <rect key="frame" x="83" y="67" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -151,6 +171,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Black Dice" id="s20-lh-WtR"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="finishButton" destination="iiB-jS-Mc7" id="TIM-mr-O0P"/>
@@ -205,7 +226,39 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="31.884057971014496" y="-17.119565217391305"/>
+            <point key="canvasLocation" x="-713" y="-17"/>
+        </scene>
+        <!--Winner View Controller-->
+        <scene sceneID="KPH-JH-DXm">
+            <objects>
+                <viewController id="19m-lJ-LOq" customClass="WinnerViewController" customModule="BlackDice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g1u-6G-dbT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ganador" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZF-2y-b4W">
+                                <rect key="frame" x="20" y="337" width="374" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zhh-GF-L2D" firstAttribute="bottom" secondItem="MZF-2y-b4W" secondAttribute="bottom" constant="268" id="2zY-Z0-kdP"/>
+                            <constraint firstItem="MZF-2y-b4W" firstAttribute="trailing" secondItem="g1u-6G-dbT" secondAttribute="trailingMargin" id="PhL-fN-WBA"/>
+                            <constraint firstItem="MZF-2y-b4W" firstAttribute="leading" secondItem="g1u-6G-dbT" secondAttribute="leadingMargin" id="SX6-ho-hwe"/>
+                            <constraint firstItem="MZF-2y-b4W" firstAttribute="top" secondItem="zhh-GF-L2D" secondAttribute="top" constant="273" id="wnl-4p-9nz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhh-GF-L2D"/>
+                    </view>
+                    <connections>
+                        <outlet property="winnerLabel" destination="MZF-2y-b4W" id="d1l-eA-g4X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kLt-n3-axZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.91304347826099" y="-17.119565217391305"/>
         </scene>
     </scenes>
     <resources>
