@@ -38,7 +38,14 @@ class WinnerViewController: UIViewController {
         if(myFinalPoints < 0 && otherFinalPoints < 0){
             self.winnerLabel.text = "EMPATE"
         }
-        else if(myFinalPoints > otherFinalPoints){
+        else if(myFinalPoints < 0 && otherFinalPoints >= 0){
+            self.winnerLabel.text = "HAS PERDIDO"
+            AudioServicesPlaySystemSound(loseSoundID)
+            
+        }else if(otherFinalPoints < 0 && myFinalPoints >= 0){
+            self.winnerLabel.text = "HAS GANADO"
+            AudioServicesPlaySystemSound(winSoundID)
+        }else if(myFinalPoints > otherFinalPoints){
             
             self.winnerLabel.text = "HAS PERDIDO"
             AudioServicesPlaySystemSound(loseSoundID)
