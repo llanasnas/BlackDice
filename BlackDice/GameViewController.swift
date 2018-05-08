@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     var photo: Array<UIImage>=[]
     var randomLimitNum:Int = Int(arc4random_uniform(24) + 7)
     var punts = 0
+    let defaults = UserDefaults.standard
     var otherPunts = 0
     var soundID:SystemSoundID=0;
 

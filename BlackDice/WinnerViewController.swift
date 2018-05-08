@@ -43,7 +43,7 @@ class WinnerViewController: UIViewController {
             AudioServicesPlaySystemSound(loseSoundID)
             
         }else if(otherFinalPoints < 0 && myFinalPoints >= 0){
-            self.winnerLabel.text = "HAS GANADO"
+            self.winnerLabel.text = "HAS GANADO 3 FICHAS"
             AudioServicesPlaySystemSound(winSoundID)
         }else if(myFinalPoints > otherFinalPoints){
             
@@ -58,7 +58,7 @@ class WinnerViewController: UIViewController {
             
 
             
-            self.winnerLabel.text = "HAS GANADO"
+            self.winnerLabel.text = "HAS GANADO 3 FICHAS"
              AudioServicesPlaySystemSound(winSoundID)
             
         }
