@@ -13,6 +13,7 @@ class WinnerViewController: UIViewController {
     var myPoints:Int = 0
     var otherPoints:Int = 0
     var limitNumber:Int = 0
+    let defaults = UserDefaults.standard
     
     var winSoundID:SystemSoundID = 0
     var loseSoundID:SystemSoundID = 0
@@ -44,6 +45,9 @@ class WinnerViewController: UIViewController {
             
         }else if(otherFinalPoints < 0 && myFinalPoints >= 0){
             self.winnerLabel.text = "HAS GANADO 3 FICHAS"
+            var totalFichas = defaults.integer(forKey: "fichas");
+            
+            defaults.set(totalFichas+3, forKey: "fichas")
             AudioServicesPlaySystemSound(winSoundID)
         }else if(myFinalPoints > otherFinalPoints){
             
@@ -59,6 +63,9 @@ class WinnerViewController: UIViewController {
 
             
             self.winnerLabel.text = "HAS GANADO 3 FICHAS"
+            var totalFichas = defaults.integer(forKey: "fichas");
+            
+            defaults.set(totalFichas+3, forKey: "fichas")
              AudioServicesPlaySystemSound(winSoundID)
             
         }

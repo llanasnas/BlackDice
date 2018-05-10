@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF17115720A4887B002FDCD4 /* TragaPerras.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17115620A4887B002FDCD4 /* TragaPerras.swift */; };
+		EF17115920A48D90002FDCD4 /* TragaPerrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */; };
 		EF3D936A2086324C0012510D /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D93692086324C0012510D /* DiceViewController.swift */; };
 		EF9A918020A1F8C100DDFA53 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A917F20A1F8C100DDFA53 /* MenuViewController.swift */; };
 		EFEF902D207FA86500DEEAFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF902C207FA86500DEEAFD /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF17115620A4887B002FDCD4 /* TragaPerras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TragaPerras.swift; sourceTree = "<group>"; };
+		EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TragaPerrasViewController.swift; sourceTree = "<group>"; };
 		EF3D93692086324C0012510D /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		EF9A917F20A1F8C100DDFA53 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		EFEF9029207FA86500DEEAFD /* BlackDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 				EFEF9038207FA86500DEEAFD /* Info.plist */,
 				EF3D93692086324C0012510D /* DiceViewController.swift */,
 				EFFFBC45209B525700F61F9B /* WinnerViewController.swift */,
+				EF17115620A4887B002FDCD4 /* TragaPerras.swift */,
+				EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */,
 			);
 			path = BlackDice;
 			sourceTree = "<group>";
@@ -173,9 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFEF902F207FA86500DEEAFD /* GameViewController.swift in Sources */,
+				EF17115720A4887B002FDCD4 /* TragaPerras.swift in Sources */,
 				EF9A918020A1F8C100DDFA53 /* MenuViewController.swift in Sources */,
 				EFEF903F207FB32F00DEEAFD /* LimitNumberCircleView.swift in Sources */,
 				EFEF902D207FA86500DEEAFD /* AppDelegate.swift in Sources */,
+				EF17115920A48D90002FDCD4 /* TragaPerrasViewController.swift in Sources */,
 				EF3D936A2086324C0012510D /* DiceViewController.swift in Sources */,
 				EFFFBC46209B525700F61F9B /* WinnerViewController.swift in Sources */,
 			);

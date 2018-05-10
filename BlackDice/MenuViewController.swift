@@ -29,7 +29,12 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        let fichas:Int = defaults.integer(forKey: "fichas")
+        let dinero:Int =  defaults.integer(forKey: "dinero")
+        fichasLabel.text = String(fichas)
+        dineroLabel.text = String(dinero)
+    }
     /*
     // MARK: - Navigation
 
