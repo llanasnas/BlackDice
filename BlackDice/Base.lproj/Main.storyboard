@@ -306,6 +306,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bt4-f8-Trf">
+                                <rect key="frame" x="89" y="517" width="237" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LGm-GH-Qtw"/>
+                                    <constraint firstAttribute="width" constant="237" id="fPs-uF-LMu"/>
+                                </constraints>
+                                <state key="normal" title="Retirar dinero"/>
+                                <connections>
+                                    <action selector="retirarDiners:" destination="Lp6-6o-PJ3" eventType="touchUpInside" id="CZP-DP-o2n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -321,8 +333,11 @@
                             <constraint firstItem="ffv-OD-L1n" firstAttribute="top" secondItem="0rD-PM-7S8" secondAttribute="bottom" constant="46" id="Msr-Af-dlG"/>
                             <constraint firstItem="Xyv-kL-Q1X" firstAttribute="trailing" secondItem="PAI-sN-ubP" secondAttribute="trailing" constant="50" id="SSc-xb-JPz"/>
                             <constraint firstItem="Xyv-kL-Q1X" firstAttribute="trailing" secondItem="0rD-PM-7S8" secondAttribute="trailing" constant="88" id="T7M-rK-b6e"/>
+                            <constraint firstItem="Xyv-kL-Q1X" firstAttribute="trailing" secondItem="bt4-f8-Trf" secondAttribute="trailing" constant="88" id="Vhh-YB-QES"/>
+                            <constraint firstItem="bt4-f8-Trf" firstAttribute="top" secondItem="ffv-OD-L1n" secondAttribute="bottom" constant="36" id="Vif-75-zkc"/>
                             <constraint firstItem="0rD-PM-7S8" firstAttribute="leading" secondItem="Xyv-kL-Q1X" secondAttribute="leading" constant="89" id="XX5-Zv-rcq"/>
                             <constraint firstItem="Xyv-kL-Q1X" firstAttribute="trailing" secondItem="NoQ-Vd-ZtV" secondAttribute="trailing" constant="11" id="Yow-hv-w1K"/>
+                            <constraint firstItem="bt4-f8-Trf" firstAttribute="leading" secondItem="Xyv-kL-Q1X" secondAttribute="leading" constant="89" id="ZT0-fk-Plq"/>
                             <constraint firstItem="hwo-V3-rH0" firstAttribute="top" secondItem="Xyv-kL-Q1X" secondAttribute="top" constant="85" id="ZkC-xB-pun"/>
                             <constraint firstItem="0rD-PM-7S8" firstAttribute="top" secondItem="hwo-V3-rH0" secondAttribute="bottom" constant="153.66666666666666" id="cWJ-xk-jcf"/>
                             <constraint firstItem="kgE-ZN-cLd" firstAttribute="top" secondItem="Xyv-kL-Q1X" secondAttribute="top" constant="6" id="eax-p7-X9K"/>
@@ -488,6 +503,9 @@
                         <outlet property="panel2" destination="126-ax-vj0" id="IuR-WP-h0C"/>
                         <outlet property="panel3" destination="aR6-Ow-4cj" id="VSo-ef-kYr"/>
                         <outlet property="playbutton" destination="BXw-p6-fvZ" id="BGD-lF-027"/>
+                        <outlet property="stopButton1" destination="tUX-sl-Iup" id="kh6-3e-TrZ"/>
+                        <outlet property="stopButton2" destination="T1D-0N-bTU" id="8CH-4s-1x7"/>
+                        <outlet property="stopButton3" destination="Q6Z-sB-Tf7" id="gKF-ET-l5l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4n7-KS-mVV" userLabel="First Responder" sceneMemberID="firstResponder"/>

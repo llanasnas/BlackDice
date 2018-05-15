@@ -11,6 +11,7 @@
 		EF17115920A48D90002FDCD4 /* TragaPerrasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */; };
 		EF3D936A2086324C0012510D /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D93692086324C0012510D /* DiceViewController.swift */; };
 		EF9A918020A1F8C100DDFA53 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A917F20A1F8C100DDFA53 /* MenuViewController.swift */; };
+		EFCB60F820AB149200B07CDC /* Icone.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCB60F720AB149200B07CDC /* Icone.swift */; };
 		EFEF902D207FA86500DEEAFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF902C207FA86500DEEAFD /* AppDelegate.swift */; };
 		EFEF902F207FA86500DEEAFD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEF902E207FA86500DEEAFD /* GameViewController.swift */; };
 		EFEF9032207FA86500DEEAFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFEF9030207FA86500DEEAFD /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TragaPerrasViewController.swift; sourceTree = "<group>"; };
 		EF3D93692086324C0012510D /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		EF9A917F20A1F8C100DDFA53 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		EFCB60F720AB149200B07CDC /* Icone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icone.swift; sourceTree = "<group>"; };
 		EFEF9029207FA86500DEEAFD /* BlackDice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackDice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFEF902C207FA86500DEEAFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFEF902E207FA86500DEEAFD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				EFFFBC45209B525700F61F9B /* WinnerViewController.swift */,
 				EF17115620A4887B002FDCD4 /* TragaPerras.swift */,
 				EF17115820A48D90002FDCD4 /* TragaPerrasViewController.swift */,
+				EFCB60F720AB149200B07CDC /* Icone.swift */,
 			);
 			path = BlackDice;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				EFEF902D207FA86500DEEAFD /* AppDelegate.swift in Sources */,
 				EF17115920A48D90002FDCD4 /* TragaPerrasViewController.swift in Sources */,
 				EF3D936A2086324C0012510D /* DiceViewController.swift in Sources */,
+				EFCB60F820AB149200B07CDC /* Icone.swift in Sources */,
 				EFFFBC46209B525700F61F9B /* WinnerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

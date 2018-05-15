@@ -13,14 +13,24 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        let fichas:Int = defaults.integer(forKey: "fichas")
-        let dinero:Int =  defaults.integer(forKey: "dinero")
-        fichasLabel.text = String(fichas)
-        dineroLabel.text = String(dinero)
+        //defaults.set(100, forKey: "fichas")
+        actualizeLabels()
         // Do any additional setup after loading the view.
     }
+    func actualizeLabels(){
+        
+        dineroLabel.text = String(defaults.integer(forKey: "diners"))
+        fichasLabel.text = String(defaults.integer(forKey: "fichas"))
+        
+        
+    }
 
+    @IBAction func retirarDiners(_ sender: Any) {
+        
+        defaults.set(0, forKey: "diners")
+        actualizeLabels()
+        
+    }
     @IBOutlet weak var fichasLabel: UILabel!
     @IBOutlet weak var dineroLabel: UILabel!
     
@@ -30,10 +40,7 @@ class MenuViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let fichas:Int = defaults.integer(forKey: "fichas")
-        let dinero:Int =  defaults.integer(forKey: "dinero")
-        fichasLabel.text = String(fichas)
-        dineroLabel.text = String(dinero)
+      actualizeLabels()
     }
     /*
     // MARK: - Navigation
